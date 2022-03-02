@@ -737,10 +737,11 @@ canvas {
 
   .mv-img {
     position: absolute;
-    top: center;
+    top: 260px;
     margin: 0 auto;
     padding: 50px;
-    right: 0;
+    width: 50%;
+    right: 0px;
   }
 
   .mv-container {
