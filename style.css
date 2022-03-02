@@ -516,7 +516,7 @@ canvas {
 
 .fuwafuwa {
   animation: fuwafuwa 2.6s infinite ease-in-out .8s alternate;
-  background: url(../img/index/logo-lite-blue.png) no-repeat center center / 95px auto;
+  background: url(https://github.com/TETSUYA-NISHIKAWA/portfolio/blob/main/img/index/logo-lite-blue.png?raw=true) no-repeat center center / 95px auto;
   display: inline-block;
   transition: 1.5s ease-in-out;
   width: 95px;
