@@ -13,6 +13,58 @@ body {
   background-color: #fff;
 }
 
+body {
+  position: relative;
+  cursor: none;
+  /*もともとあるカーソルは非表示に*/
+  height: 100vh;
+}
+
+/*カーソル要素*/
+#cursor {
+  position: fixed;
+  /*丸の大きさと色の指定*/
+  background: #000;
+  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  /*真ん中にくるようにマイナスマージンで調整*/
+  z-index: 3;
+  /*一番手前に来るように*/
+  pointer-events: none;
+  /*クリックできなくなるのを防ぐため。noneで対応*/
+  opacity: 0;
+  transition: transform 0.1s;
+  /*アニメーションの秒数指定*/
+}
+
+
+/*ちょっと遅れてついてくるストーカー要素*/
+#stalker {
+  position: fixed;
+
+  /*丸の大きさと色の指定*/
+  background: #00f;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  margin: -20px 0 0 -20px;
+  /*真ん中にくるようにマイナスマージンで調整*/
+  z-index: 2;
+  /*カーソルの後ろに来るように*/
+  pointer-events: none;
+  /*クリックできなくなるのを防ぐため。noneで対応*/
+  opacity: 0;
+  transition: transform 0.6s;
+  /*アニメーションの秒数指定*/
+}
+
+#stalker.active {
+  transform: scale(2.5);
+}
+
+
 a {
   transition: 0.3s;
   text-decoration: none;
@@ -671,61 +723,6 @@ canvas {
 .home-link {
   text-align: center;
 }
-
-/*media Queries 1025
-----------------------------------------------------*/
-@media screen and (min-width : 1025px) {
-
-  body {
-    position: relative;
-    cursor: none;
-    /*もともとあるカーソルは非表示に*/
-    height: 100vh;
-  }
-
-  /*カーソル要素*/
-  #cursor {
-    position: fixed;
-    /*丸の大きさと色の指定*/
-    background: #000;
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    margin: -5px 0 0 -5px;
-    /*真ん中にくるようにマイナスマージンで調整*/
-    z-index: 3;
-    /*一番手前に来るように*/
-    pointer-events: none;
-    /*クリックできなくなるのを防ぐため。noneで対応*/
-    opacity: 0;
-    transition: transform 0.1s;
-    /*アニメーションの秒数指定*/
-  }
-
-
-  /*ちょっと遅れてついてくるストーカー要素*/
-  #stalker {
-    position: fixed;
-
-    /*丸の大きさと色の指定*/
-    background: #00f;
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
-    margin: -20px 0 0 -20px;
-    /*真ん中にくるようにマイナスマージンで調整*/
-    z-index: 2;
-    /*カーソルの後ろに来るように*/
-    pointer-events: none;
-    /*クリックできなくなるのを防ぐため。noneで対応*/
-    opacity: 0;
-    transition: transform 0.6s;
-    /*アニメーションの秒数指定*/
-  }
-
-  #stalker.active {
-    transform: scale(2.5);
-  }
 
 /*media Queries 767
 ----------------------------------------------------*/
