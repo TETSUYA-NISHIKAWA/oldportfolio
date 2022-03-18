@@ -388,7 +388,7 @@ canvas {
 .ZoomOpacity img:hover {
   transform: scale(1.2, 1.2);
   transition: .5s all;
-  opacity: 0.6;
+  /*opacity: 0.6;*/
 }
 
 .works-item:nth-of-type(3n) {
