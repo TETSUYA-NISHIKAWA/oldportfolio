@@ -724,6 +724,22 @@ canvas {
   text-align: center;
 }
 
+/*media Queries 1023
+----------------------------------------------------*/
+@media screen and (max-width: 1023px) {
+
+  /*カーソル要素*/
+  #cursor {
+    width: 0;
+    height: 0;
+  }
+
+  /*ちょっと遅れてついてくるストーカー要素*/
+  #stalker {
+    width: 0;
+    height: 0;
+  }
+
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
