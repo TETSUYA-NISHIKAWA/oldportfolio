@@ -403,6 +403,10 @@ canvas {
   vertical-align: top;
 }
 
+.dummy {
+  pointer-events: none;
+}
+
 .works-name {
   font-size: 13px;
   font-weight: 600;
