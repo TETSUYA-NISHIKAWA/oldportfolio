@@ -25,6 +25,20 @@ $(function () {
       });
     },40);//カーソルより遅れる時間を指定
   });
+	
+  //aタグホバー
+  $("a").on({
+    "mouseenter": function() {
+      //activeクラス付与
+      cursor.addClass("active");
+      stalker.addClass("active");
+    },
+    "mouseleave": function() {
+      cursor.removeClass("active");
+      stalker.removeClass("active");
+      
+    }
+  });
 
   //ページ内スクロール
   var navHeight = $(".header").outerHeight();
