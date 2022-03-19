@@ -1,5 +1,6 @@
-$(function () {
+/*------------　カーソルストーカー ------------*/
 
+$(function () {
   //カーソル要素の指定
   var cursor=$("#cursor");
   //ちょっと遅れてついてくるストーカー要素の指定  
@@ -19,12 +20,13 @@ $(function () {
     //ストーカー要素のcssを書き換える用    
     setTimeout(function(){
       stalker.css({
-        "opacity":"0.4",
+        "opacity":"0.3",
         "top":y+"px",
         "left":x+"px"
       });
-    },30);//カーソルより遅れる時間を指定
+    },40);//カーソルより遅れる時間を指定
   });
+  
   //aタグホバー
   $("a").on({
     "mouseenter": function() {
@@ -38,8 +40,10 @@ $(function () {
       
     }
   });
+  });
 
-  //ページ内スクロール
+  /*------------　//ページ内スクロール ------------*/
+
   var navHeight = $(".header").outerHeight();
 
   $('a[href^="#"]').on("click", function () {
@@ -50,11 +54,14 @@ $(function () {
     return false;
   });
 
-  //ページトップ
+  /*------------　//ページトップ ------------*/
+
   $("#js-page-top").on("click", function () {
     $("body,html").animate({ scrollTop: 0, }, 300);
     return false;
   });
+
+  /*------------　//波 ------------*/
 
   var unit = 100,
     canvasList, // キャンバスの配列
@@ -69,7 +76,7 @@ $(function () {
 function init() {
     info.seconds = 0;
     info.t = 0;
-		canvasList = [];
+    canvasList = [];
     colorList = [];
     // canvas1個めの色指定
     canvasList.push(document.getElementById("waveCanvas"));
@@ -80,19 +87,19 @@ function init() {
     colorList.push(['#FDEEEE']);
             canvasList.push(document.getElementById("waveCanvas4"));
     colorList.push(['#fff']);
-	// 各キャンバスの初期化
-		for(var canvasIndex in canvasList) {
+  // 各キャンバスの初期化
+    for(var canvasIndex in canvasList) {
         var canvas = canvasList[canvasIndex];
         canvas.width = document.documentElement.clientWidth; //Canvasのwidthをウィンドウの幅に合わせる
         canvas.height = 50;//波の高さ
         canvas.contextCache = canvas.getContext("2d");
     }
     // 共通の更新処理呼び出し
-		update();
+    update();
 }
 
 function update() {
-		for(var canvasIndex in canvasList) {
+    for(var canvasIndex in canvasList) {
         var canvas = canvasList[canvasIndex];
         // 各キャンバスの描画
         draw(canvas, colorList[canvasIndex]);
@@ -111,7 +118,7 @@ function update() {
  * itself again.
  */
 function draw(canvas, color) {
-		// 対象のcanvasのコンテキストを取得
+    // 対象のcanvasのコンテキストを取得
     var context = canvas.contextCache;
     // キャンバスの描画をクリア
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -125,7 +132,7 @@ function draw(canvas, color) {
 * drawWave(色, 不透明度, 波の幅のzoom, 波の開始位置の遅れ)
 */
 function drawWave(canvas, color, alpha, zoom, delay) {
-		var context = canvas.contextCache;
+    var context = canvas.contextCache;
     context.fillStyle = color;//塗りの色
     context.globalAlpha = alpha;
     context.beginPath(); //パスの開始
@@ -161,6 +168,8 @@ function drawSine(canvas, t, zoom, delay) {
 }
 
 init();
+
+ /*------------　//アニメーション ------------*/
   
 //スクロールをしたら1度だけ見出しをフェイドインアップ
 $('.fadeInUpTriggerOnceTitle').on('inview', function(event, isInView) {
@@ -196,5 +205,3 @@ $('.flipTriggerOnce').on('inview', function(event, isInView) {
     $(this).addClass('animate__animated animate__rubberBand animate__delay-1s');
   }
 }); 
-
-});
