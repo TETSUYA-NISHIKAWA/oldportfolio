@@ -1,6 +1,5 @@
-/*------------　カーソルストーカー ------------*/
-
 $(function () {
+
   //カーソル要素の指定
   var cursor=$("#cursor");
   //ちょっと遅れてついてくるストーカー要素の指定  
@@ -20,13 +19,12 @@ $(function () {
     //ストーカー要素のcssを書き換える用    
     setTimeout(function(){
       stalker.css({
-        "opacity":"0.3",
+        "opacity":"0.4",
         "top":y+"px",
         "left":x+"px"
       });
-    },40);//カーソルより遅れる時間を指定
+    },30);//カーソルより遅れる時間を指定
   });
-  
   //aタグホバー
   $("a").on({
     "mouseenter": function() {
@@ -40,10 +38,8 @@ $(function () {
       
     }
   });
-  });
 
-  /*------------　//ページ内スクロール ------------*/
-
+  //ページ内スクロール
   var navHeight = $(".header").outerHeight();
 
   $('a[href^="#"]').on("click", function () {
@@ -54,14 +50,11 @@ $(function () {
     return false;
   });
 
-  /*------------　//ページトップ ------------*/
-
+  //ページトップ
   $("#js-page-top").on("click", function () {
     $("body,html").animate({ scrollTop: 0, }, 300);
     return false;
   });
-
-  /*------------　//波 ------------*/
 
   var unit = 100,
     canvasList, // キャンバスの配列
@@ -168,8 +161,6 @@ function drawSine(canvas, t, zoom, delay) {
 }
 
 init();
-
- /*------------　//アニメーション ------------*/
   
 //スクロールをしたら1度だけ見出しをフェイドインアップ
 $('.fadeInUpTriggerOnceTitle').on('inview', function(event, isInView) {
@@ -205,3 +196,5 @@ $('.flipTriggerOnce').on('inview', function(event, isInView) {
     $(this).addClass('animate__animated animate__rubberBand animate__delay-1s');
   }
 }); 
+
+});
