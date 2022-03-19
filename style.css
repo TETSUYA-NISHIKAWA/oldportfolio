@@ -852,7 +852,7 @@ canvas {
       position: absolute;
       top: center;
       margin: 0 auto;
-      padding: 50px;
+      padding: 40px;
     }
 
     .mv-title {
@@ -865,7 +865,7 @@ canvas {
     }
 
     .mv-text {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.7;
     }
     
