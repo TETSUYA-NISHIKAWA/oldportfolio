@@ -229,23 +229,32 @@ img {
   top: 0;
   z-index: 1;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .1);
+  background-color: rgba(255, 255, 255, 0);
+  /*box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .1);*/
 }
 
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px 24px;
+  justify-content: end;
+  padding: 40px 24px 16px 24px;
+  max-width: 1366px;
 }
 
 .header-logo {
-  font-size: 1.414rem;
-  font-weight: normal;
+  font-size: 1.999rem;
+  font-weight: 600;
   line-height: 1.2;
   margin-right: 32px;
   letter-spacing: .05em;
+  writing-mode: tb;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  height: calc(100% - 100px);
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .header-logo a {
@@ -264,7 +273,7 @@ img {
 
 .gnav-item a {
   position: relative;
-  font-weight: normal;
+  font-weight: 100;
   display: inline-block;
   padding: 4px 0;
   transition: .3s;
@@ -299,13 +308,13 @@ img {
   height: 100vh;
   /*text-align: center;*/
   background-color: #fff;
-  padding-bottom: 96px;
+  margin-bottom: 96px;
 }
 
 
 .mv-img {
   position: absolute;
-  right: 7%;
+  right: 10%;
   transform: scale(1.1);
 }
 
@@ -316,11 +325,11 @@ img {
 }
 
 .mv-title {
-  font-size: 3.998rem;
-  font-weight: 500;
-  line-height: 1.2;
+  font-size: 5.063rem;
+  font-weight: 600;
+  line-height: 1;
   margin-bottom: 8px;
-  letter-spacing: .1em;
+  letter-spacing: .05em;
 }
 
 /*
@@ -334,16 +343,16 @@ img {
 */
 
 .mv-subtitle {
-  font-size: 1.414rem;
-  font-weight: 500;
+  font-size: 5.063rem;
+  font-weight: 600;
   line-height: 1;
-  margin-bottom: 48px;
-  letter-spacing: .08em;
+  margin: 0px 0 48px 0;
+  letter-spacing: .05em;
 }
 
 .mv-text {
   line-height: 1.8;
-}
+} 
 
 /*--------------------------------
  波線
@@ -740,100 +749,126 @@ canvas {
     height: 0;
   }
 
-/*media Queries 767
-----------------------------------------------------*/
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-
-  .pc-only {
-    display: none;
-  }
-
-  .sp-only {
-    display: block;
-  }
-
-  /* 見出し */
-  .title {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-
-  .lead {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  /* レイアウト */
-  .wrapper {
-    padding-top: 57px;
-  }
-
-  .section, .section:last-of-type {
-    padding: 96px 0;
-  }
-
-  .container {
-    padding: 0 32px 24px 32px;
-  }
-
   /* ヘッダー */
   .header .container {
-    padding: 15px;
+    justify-content: space-between;
   }
 
   .header-logo {
-    font-size: 15px;
-    margin-right: 15px;
+    writing-mode: initial;
+    position: initial;
   }
-
-  .gnav-item:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  .gnav-item a {
-    font-size: 10px;
-  }
-
-  .gnav-item a:after {
-    display: none;
-  }
-
-  /*  メインビジュアル */
-  .mv {
-    height: 75vh;
-  }
-
-  .mv-img {
-    position: absolute;
-    top: center;
-    margin: 0 auto;
-    padding: 50px;
-    right: 0;
-  }
-
-  .mv-container {
-    padding: 0 32px;
+  
+    .mv-container {
+    padding: 0 96px;
+    width: 100%;
+    max-width: 1280px;
     text-align: center;
   }
 
-  .mv-title {
-    font-size: 30px;
+  .mv-img {
+    right: initial;
   }
 
-  .mv-subtitle {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
+}
 
-  .mv-text {
-    font-size: 14px;
-    line-height: 1.7;
-  }
+  /*media Queries 767
+----------------------------------------------------*/
+  @media screen and (max-width: 767px) {
+    body {
+      font-size: 14px;
+    }
 
+    .pc-only {
+      display: none;
+    }
+
+    .sp-only {
+      display: block;
+    }
+
+    /* 見出し */
+    .title {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    /* レイアウト */
+    .wrapper {
+      padding-top: 57px;
+    }
+
+    .section, .section:last-of-type {
+      padding: 96px 0;
+    }
+
+    .container {
+      padding: 0 32px 24px 32px;
+    }
+
+    /* ヘッダー */
+    .header {
+      background-color: #fff;
+    }
+
+    .header .container {
+      padding: 16px;
+    }
+
+    .header-logo {
+      font-size: 15px;
+      margin-right: 15px;
+    }
+
+    .header-logo a {
+      writing-mode: initial;
+      position: initial;
+    }
+
+    .gnav-item:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    .gnav-item a {
+      font-size: 10px;
+    }
+
+    .gnav-item a:after {
+      display: none;
+    }
+
+    /*  メインビジュアル */
+    .mv {
+      height: 100vh;
+    }
+
+    .mv-img {
+      position: absolute;
+      top: center;
+      margin: 0 auto;
+      padding: 50px;
+    }
+
+    .mv-title {
+      font-size: 30px;
+    }
+
+    .mv-subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .mv-text {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    
   /* Works */
   .works-name {
     font-size: 12px;
