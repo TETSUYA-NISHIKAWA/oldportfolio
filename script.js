@@ -1,8 +1,6 @@
-$(function () {
-
 /*------------　カーソルストーカー ------------*/
 
-$(window).on('mousemove', function () {
+$(function () {
   //カーソル要素の指定
   var cursor=$("#cursor");
   //ちょっと遅れてついてくるストーカー要素の指定  
@@ -207,5 +205,3 @@ $('.flipTriggerOnce').on('inview', function(event, isInView) {
     $(this).addClass('animate__animated animate__rubberBand animate__delay-1s');
   }
 }); 
-
-});
