@@ -78,11 +78,6 @@ img {
   border-style: none;
 }
 
-.mv-img,
-.profile-img {
-  pointer-events: none;
-}
-
 .pc-only {
   display: block;
 }
@@ -751,6 +746,10 @@ canvas {
   #stalker {
     width: 0;
     height: 0;
+  }
+  
+  img {
+    pointer-events: none;
   }
 
   /* ヘッダー */
