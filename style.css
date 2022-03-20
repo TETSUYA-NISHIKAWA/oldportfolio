@@ -78,6 +78,10 @@ img {
   border-style: none;
 }
 
+.target{
+  pointer-events: none;
+}
+
 .pc-only {
   display: block;
 }
