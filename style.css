@@ -78,7 +78,8 @@ img {
   border-style: none;
 }
 
-.target{
+.mv-img,
+.profile-img {
   pointer-events: none;
 }
 
