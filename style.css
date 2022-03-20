@@ -76,7 +76,6 @@ img {
   height: auto;
   vertical-align: bottom;
   border-style: none;
-  pointer-events: none;
 }
 
 .pc-only {
