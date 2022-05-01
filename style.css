@@ -320,7 +320,8 @@ img {
 
 .mv-img {
   position: absolute;
-  right: 10%;
+  top: -80px;
+  right: 3%;
   transform: scale(1.1);
 }
 
@@ -776,7 +777,8 @@ canvas {
   }
 
   .mv-img {
-    right: initial;
+    position: static;
+    margin: 88px;
   }
 
 }
@@ -858,8 +860,6 @@ canvas {
     }
 
     .mv-img {
-      position: absolute;
-      top: center;
       margin: 0 auto;
       padding: 40px;
     }
