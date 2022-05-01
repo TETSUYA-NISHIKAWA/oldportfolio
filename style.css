@@ -317,18 +317,18 @@ img {
   margin-bottom: 96px;
 }
 
+.mv-container {
+  padding: 0 96px;
+  width: 100%;
+  max-width: 1280px;
+  position: relative;
+}
 
 .mv-img {
   position: absolute;
   top: -80px;
   right: 3%;
   transform: scale(1.1);
-}
-
-.mv-container {
-  padding: 0 96px;
-  width: 100%;
-  max-width: 1280px;
 }
 
 .mv-title {
