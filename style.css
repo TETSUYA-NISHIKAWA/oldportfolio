@@ -674,7 +674,9 @@ canvas {
 .scroll-box {
   overflow-y: scroll;
   height: auto;
-  max-height: 513px;
+  max-width: 854px;
+  max-height: 480px;
+  margin: 0 auto;
 }
 
 .scroll-box:last-child {
@@ -693,12 +695,12 @@ canvas {
 
 .article-title {
   font-size: 1.414rem;
-  margin-bottom: 32px;
+  margin: 48px 0 32px 0;
   text-align: center;
 }
 
 .article-body {
-  max-width: 912px;
+  max-width: 1024px;
   margin: 0 auto;
   margin-bottom: 80px;
 }
@@ -724,15 +726,14 @@ canvas {
   background-color: #0E1925;
 }
 
-.article-body p:first-child {
+/*.article-body p:first-child {
   margin-bottom: 96px;
-  text-align: center;
-}
+}*/
 
 .article-body p {
   font-size: 14px;
   line-height: 1.8;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 .home-link {
