@@ -712,7 +712,7 @@ canvas {
 }
 
 .article-body h3:not(:first-child) {
-  margin-top: 48px;
+  margin-top: 64px;
 }
 
 .article-body h3::before {
