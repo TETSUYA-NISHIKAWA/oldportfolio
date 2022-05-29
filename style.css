@@ -396,6 +396,7 @@ canvas {
 .ZoomOpacity {
   overflow: hidden;
   background: #000;
+  border: 1px solid #e6e6e6;
 }
 
 .ZoomOpacity img {
@@ -413,7 +414,6 @@ canvas {
 }
 
 .works-item img {
-  border: 1px solid #e6e6e6;
   object-fit: cover;
   object-position: top;
   height: auto;
@@ -423,6 +423,11 @@ canvas {
 .dummy {
   pointer-events: none;
 }
+
+.arrange {
+  border: 1px solid #e6e6e6;
+}
+
 
 .works-name {
   font-size: 13px;
