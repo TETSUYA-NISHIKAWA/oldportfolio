@@ -726,9 +726,9 @@ canvas {
   background-color: #0E1925;
 }
 
-/*.article-body p:first-child {
-  margin-bottom: 96px;
-}*/
+*.article-body p:first-child {
+  text-align: center;
+}*
 
 .article-body p {
   font-size: 14px;
