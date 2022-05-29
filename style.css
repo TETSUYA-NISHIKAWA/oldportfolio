@@ -953,7 +953,7 @@ canvas {
 
   /* 下層ページ */
   .article {
-    padding: 50px 0;
+    padding: 0;
   }
 
   .article-container {
@@ -972,7 +972,7 @@ canvas {
   .article-body p {
     font-size: 14px;
     line-height: 1.7;
-    margin-bottom: 20px;
+    margin-bottom: 48px;
   }
 
   .scroll-box {
