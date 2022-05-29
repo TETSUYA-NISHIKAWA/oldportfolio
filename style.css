@@ -386,6 +386,12 @@ canvas {
   margin-bottom: -40px;
 }
 
+.works-list:after{
+  content:"";
+  display: block;
+  width:26%;
+}
+
 .works-item {
   width: 26%;
   margin-right: auto;
