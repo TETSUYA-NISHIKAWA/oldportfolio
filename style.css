@@ -695,7 +695,7 @@ canvas {
 
 .article-title {
   font-size: 1.414rem;
-  margin: 48px 0 32px 0;
+  margin: 40px 0 48px 0;
   text-align: center;
 }
 
@@ -726,14 +726,15 @@ canvas {
   background-color: #0E1925;
 }
 
-*.article-body p:first-child {
+.article-body p:first-child,
+.article-body p::nth-child(2) {
   text-align: center;
-}*
+}
 
 .article-body p {
   font-size: 14px;
   line-height: 1.8;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 .home-link {
