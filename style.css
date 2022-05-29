@@ -960,6 +960,10 @@ canvas {
   .article-container {
     padding: 0 32px 32px 32px;
   }
+    
+  .article-title {
+    margin: 32px 0 48px 0;
+  }
 
   .article-body h3 {
     font-size: 16px;
@@ -974,6 +978,10 @@ canvas {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 48px;
+  }
+    
+  .article-body p:nth-child(2) {
+    text-align: left;
   }
 
   .scroll-box {
