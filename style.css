@@ -727,7 +727,7 @@ canvas {
 }
 
 .article-body p:first-child,
-.article-body p::nth-child(2) {
+.article-body p:nth-child(2) {
   text-align: center;
 }
 
