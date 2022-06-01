@@ -50,7 +50,7 @@ $(function () {
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? "html" : href);
     var position = target.offset().top - navHeight;
-    $("html, body").animate({ scrollTop: position, }, 300, "swing");
+    $("html, body").animate({ scrollTop: position, }, 4700, "swing");
     return false;
   });
 
