@@ -50,14 +50,14 @@ $(function () {
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? "html" : href);
     var position = target.offset().top - navHeight;
-    $("html, body").animate({ scrollTop: position, }, 4700, "swing");
+    $("html, body").animate({ scrollTop: position, }, 300, "swing");
     return false;
   });
 
   /*------------　//ページトップ ------------*/
 
   $("#js-page-top").on("click", function () {
-    $("body,html").animate({ scrollTop: 0, }, 300);
+    $("body,html").animate({ scrollTop: 0, }, 4700);
     return false;
   });
 
